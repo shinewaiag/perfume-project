@@ -1,0 +1,1134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap");
+/* global variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* global color variables*/
+:root {
+  --bg-color: #2a2a3a;
+  --text-color: #eeeeee;
+  --main-color: #c69749;
+  --covertext-color: #735f32;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--covertext-color);
+  border-radius: 10px;
+}
+
+/* header section */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: var(--bg-color, 50%);
+}
+
+header .logoname {
+  color: var(--text-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.logoname i {
+  margin-right: 7px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.navbar a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+.navbar a:hover::after,
+.navbar .active::after {
+  width: 100%;
+}
+
+.search {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+}
+
+.btn {
+  background-color: var(--covertext-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: var(--main-color);
+}
+
+/* home cover section */
+.container {
+  width: 100%;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-text {
+  position: absolute;
+  right: 10px;
+}
+
+.cover-text .title {
+  color: var(--covertext-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Pacifico", cursive;
+}
+
+.cover-text span {
+  color: var(--covertext-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.cover-text h1 {
+  color: var(--covertext-color);
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cover-text a {
+  color: var(--covertext-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.cover-text .shop:hover {
+  color: var(--main-color);
+}
+
+/* introduction section */
+.para {
+  background-color: var(--bg-color);
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  padding: 2.4rem 10rem;
+  margin-bottom: 1rem;
+}
+.para h3 {
+  color: var(--text-color);
+  font-family: "Pacifico", cursive;
+  margin-bottom: 1rem;
+}
+
+.para h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.para p {
+  color: var(--text-color);
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+/* to get the right place from nav */
+.men {
+  padding-top: 3rem;
+}
+
+.women {
+  padding-top: 3rem;
+}
+
+.unisex {
+  padding-top: 3rem;
+}
+
+.blog {
+  padding-top: 3rem;
+}
+
+
+/* collection section */
+.collection {
+  max-width: 960px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.collect-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+  
+}
+
+.collect-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.collect-container a {
+  color: var(--covertext-color);
+  transition: 0.5s;
+}
+
+.collect-container a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--covertext-color);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: 0.5s;
+}
+
+.collect-container a:hover, .collect-container a:hover::after {
+  width: 35%;
+  color: var(--bg-color);
+}
+
+.collect-container .toppicks {
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  
+}
+
+.toppicks img {
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.toppicks:hover img {
+  opacity: 1;
+}
+
+.toppicks-text {
+  color: var(--bg-color);
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+}
+
+.toppicks-text h2 {
+  margin-top: 1rem;
+}
+
+.toppicks-text p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.collect-container .promocode {
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.promocode img {
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.promocode:hover img {
+  opacity: 1;
+}
+
+.promocode-text {
+  color: var(--bg-color);
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+}
+
+.promocode-text p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* perfume section */
+.heading {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 10rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--main-color);
+}
+.perfume-container {
+  max-width: 960px;
+  margin: auto;
+  margin: 20px auto 0px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+}
+.box {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.box .box-image {
+  width: 100%;
+  height: 200px;
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.box-image img:hover {
+  transform: translateY(-4px);
+  border: 1px solid var(--main-color);
+}
+
+.rate {
+  margin-top: 1rem;
+}
+
+.rate .perfumename {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.rate span {
+  font-size: 0.7rem;
+}
+.checked {
+  color: var(--main-color);
+}
+
+.rate .price {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.shopnow {
+  margin-top: 1rem;
+}
+.shopnow a {
+  background-color: var(--covertext-color);
+  color: var(--text-color);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  transition: 0.5s;
+}
+
+.shopnow a:hover {
+  background-color: var(--main-color);
+}
+
+/* banner section  */
+.banner {
+  max-width: 960px;
+  background-color: var(--covertext-color);
+  margin: auto;
+}
+.banner-div {
+  max-width: 960px;
+  margin: auto;
+  min-height: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 2rem;
+  margin-bottom: 0.1rem;
+  padding: 1rem 2rem;
+}
+
+.banner-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-icon .icon {
+  margin-right: 0.7rem;
+  color: var(--text-color);
+  font-size: 2.5rem;
+}
+
+.title {
+  padding: 1rem 1rem;
+}
+.title h4 {
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.title span {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+/* blog section  */
+
+.blog-container {
+  max-width: 960px;
+  margin: auto;
+  margin: 20px auto 0px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+}
+
+.blogbox {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blogbox .blogbox-image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.blogbox-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.blogimage {
+  opacity: 1;
+  width: 100%;
+}
+
+.blogpara{
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.blogbox-image:hover .blogimage {
+  opacity: 0.2;
+}
+
+.blogbox-image:hover .blogpara {
+  opacity: 1;
+}
+
+.blogbox p {
+  margin-top: 2rem;
+  color: var(--text-color);
+  padding: 0 2rem;
+  text-align: justify;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.blogbox .read {
+  color: var(--text-color);
+  padding: 0.4rem 0.4rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+}
+
+.blogbox .read:hover {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+
+/* feed section */
+.insta {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.feed h2 {
+  color: var(--covertext-color);
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.feed h2::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 25%;
+}
+
+.feed .bx {
+  font-size: 4rem;
+  color: var(--covertext-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedimage {
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+}
+
+.feedimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.items {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  transition: 0.5s;
+}
+.middle {
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.items:hover .image {
+  opacity: 0.3;
+}
+
+.items:hover .middle {
+  opacity: 1;
+  filter: brightness(1.8);
+}
+
+/* newsletter section */
+
+.general {
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.general h2 {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-bottom: 0.6rem;
+}
+
+.general a {
+  color: var(--text-color);
+}
+
+.quick-menu {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quick-menu a {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 200;
+  transition: 0.5s;
+  line-height: 1.4rem;
+}
+
+.quick-menu a:hover {
+  color: var(--covertext-color);
+}
+
+.newsletter {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.newsletter span {
+  font-family: "Pacifico", cursive;
+  color: var(--main-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+form .email {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+input::placeholder {
+  color: var(--covertext-color);
+  font-size: 0.9rem;
+}
+form .sub {
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  background-color: var(--covertext-color);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+form .sub:hover {
+  background-color: var(--main-color);
+}
+
+.information {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.information a {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 200;
+  transition: 0.5s;
+  line-height: 1.4rem;
+}
+
+.information a:hover {
+  color: var(--covertext-color);
+}
+
+/* social section  */
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social .bx {
+  color: var(--covertext-color);
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+.social .bx:hover {
+  color: var(--main-color);
+}
+
+/* footer section */
+.footer {
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--covertext-color);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* responsive section  */
+@media (max-width: 1100px) {
+
+  /* header section */
+  .logoname {
+    margin-right: 0.2rem;
+    width: 6rem;
+  }
+  .right-nav a {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width:1050px) {
+
+  /* header section */
+  .right-nav .search {
+    width: 6rem;
+  }
+}
+
+@media (max-width:960px) {
+  .right-nav .search {
+  display: none;
+  }
+}
+
+@media (max-width:855px) {
+
+  /* header section */
+  header .navbar {
+    display: none;
+  }
+
+  .logoname {
+    font-size: 0.9rem;
+  }
+
+  .right-nav a{
+    font-size: 0.9rem;
+  }
+
+  /* cover section */
+  .cover-text span {
+    font-size: 1.1rem;
+  }
+
+  .cover-text h1 {
+    font-size: 3rem;
+  }
+
+  .cover-text a {
+    font-size: 0.9rem;
+  }
+
+  /* introduction section */
+  .para {
+    padding: 0 0;
+  }
+
+  .para h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .para h1 {
+    font-size: 1.5rem;
+  }
+
+  .para p {
+    font-size: 0.8rem;
+    padding: 1rem 1rem;
+  }
+
+  /* collection section */
+  .toppicks-text span {
+    font-size: 0.8rem;
+  }
+
+  .toppicks-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .toppicks-text p {
+    font-size: 0.8rem;
+  }
+
+  .toppicks-text a {
+    font-size: 0.8rem;
+  }
+
+  .promocode-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .promocode-text p {
+    font-size: 0.8rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .promocode-text a {
+    font-size: 0.8rem;
+  }
+
+  /* perfume section */
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .rate .perfumename {
+    font-size: 1rem;
+  }
+
+  .rate .price {
+    font-size: 0.8rem;
+  }
+
+  .shopnow a {
+    font-size: 0.8rem;
+  }
+
+  /* banner section */
+  .icon .bx {
+    font-size: 2rem;
+  }
+
+  .icon .fa-solid {
+    font-size: 2rem;
+  }
+
+  .title h4 {
+    font-size: 0.8rem;
+  }
+
+  .title span {
+    font-size: 0.7rem;
+  }
+
+  /* blog section  */
+  .blogbox p {
+    font-size: 0.6rem;
+  }
+
+  .blogbox .read {
+    font-size: 0.6rem;
+  }
+
+  /* feed section */
+  .feed .bx {
+    font-size: 3rem;
+  }
+
+  .feed h2 {
+    font-size: 1.3rem;
+  }
+
+  .feed h2::after {
+    height: 2px;
+  }
+
+  /* newsletter section */
+  .general h2 {
+    font-size: 0.8rem;
+  }
+
+  .quick-menu a {
+    font-size: 0.7rem;
+  }
+
+  .information a {
+    font-size: 0.7rem;
+  }
+
+  input::placeholder {
+    font-size: 0.7rem;
+  }
+
+  .sub {
+    font-size: 0.7rem;
+  }
+
+  /* social section */
+  .social .bx {
+    font-size: 1.8rem;
+  }
+
+  /* footer section */
+  .footer p {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width:456px) {
+  /* header section */
+  header {
+    padding: 12px 4%;
+  }
+
+  /* cover section */
+  .cover-text .title {
+    margin-left: 0;
+  }
+  /* banner section */
+  .title {
+    margin-left: 3rem;
+   }
+ 
+   .icon {
+     margin-left: 2rem;
+   }
+}
+
+@media (max-width:440px) {
+  /* header section */
+  header {
+    padding: 12px 4%;
+  }
+
+  .logoname {
+    font-size: 0.7rem;
+  }
+
+  .right-nav a{
+    font-size: 0.7rem;
+  }
+
+  /* cover section */
+  .cover-text span {
+    font-size: 0.9rem;
+    padding: 0 0;
+  }
+
+  .cover-text .title {
+    margin-left: 0;
+  }
+
+  .cover-text h1 {
+    font-size: 2rem;
+  }
+
+  .cover-text a {
+    font-size: 0.7rem;
+  }
+
+  .cover-text a {
+    padding: 6px 6px;
+  }
+
+  /* introduction section */
+  .para {
+    padding: 0 0;
+  }
+
+  .para h3 {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .para h1 {
+    font-size: 1.3rem;
+  }
+
+  .para p {
+    font-size: 0.6rem;
+    padding: 1rem 1rem;
+  }
+
+  /* collection section */
+  .toppicks-text {
+    top: 55%;
+    left: 0.5rem;
+  }
+
+  .toppicks-text span {
+    font-size: 0.6rem;
+  }
+
+  .toppicks-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .toppicks-text p {
+    font-size: 0.6rem;
+  }
+
+  .toppicks-text a {
+    font-size: 0.6rem;
+  }
+  .promocode-text {
+    top: 55%;
+    left: 0.5rem;
+  }
+
+  .promocode-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .promocode-text p {
+    font-size: 0.6rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .promocode-text a {
+    font-size: 0.6rem;
+  }
+
+  /* perfume section */
+  h1 {
+    font-size: 1rem;
+  }
+
+  .rate .perfumename {
+    font-size: 0.8rem;
+  }
+
+  .rate .price {
+    font-size: 0.6rem;
+  }
+
+  .shopnow a {
+    font-size: 0.6rem;
+  }
+
+  /* banner section */
+  .title {
+   margin-left: 3rem;
+  }
+
+  .icon {
+    margin-left: 2rem;
+  }
+
+  /* blog section */
+  .blogbox p {
+    font-size: 0.4rem;
+  }
+
+  .blogbox .read {
+    font-size: 0.4rem;
+  }
+
+  /* feed section */
+  .feed .bx {
+    font-size: 2.5rem;
+  }
+
+  .feed h2 {
+    font-size: 1.1rem;
+  }
+
+  .feed h2::after {
+    height: 1px;
+  }
+}
+
+@media (max-width: 376px) {
+  /* cover section */
+  .cover-text span {
+    font-size: 0.7rem;
+    padding: 0 0;
+  }
+
+  .cover-text .title {
+    padding: 0 48px ;
+  }
+
+  .cover-text h1 {
+    font-size: 1.5rem;
+    padding: 0 3rem;
+  }
+
+  .cover-text a {
+    font-size: 0.7rem;
+    padding: 0 3rem;
+  }
+
+  .cover-text a {
+    padding: 6px 6px;
+  }
+
+  .cover-text .edp {
+    padding-left: 3rem;
+  } 
+
+  /* introduction section */
+  .para {
+    padding: 0 0;
+  }
+  .para h3 {
+    margin-top: 2rem;
+  }
+  .para p {
+    padding: 1rem 1rem;
+  }
+
+  /* perfume section */
+  .heading {
+    padding: 0.3rem 0;
+  }
+
+  /* newsletter section */
+  .newsletter {
+    margin-right: 1rem;
+  }
+}
